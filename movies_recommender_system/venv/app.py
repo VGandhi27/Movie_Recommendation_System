@@ -45,13 +45,13 @@ st.title('Movie Recommender System')
 
 
 selected_movie_name = st.selectbox(
-'How would you like to be contacted?',
+'Enter the name of the Movie and also see its recommendation',
 movies['title'].values)
 
-if st.button('Recommend'):
+if st.button('Enter'):
     names,posters,homepage = recommend(selected_movie_name)
 
-    col1, col2,   = st.columns(2, gap="small")
+    col1, col2   = st.columns(2, gap="small")
     with col1:
         st.text(names[0])
         st.image(posters[0])
