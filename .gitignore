@@ -1,0 +1,7 @@
+*.log
+.ipynb_checkpoints/
+movies_recommender_system/.idea/
+movies_recommender_system/main.py/
+*similarity.pkl
+movies_recommender_system/venv/Scripts/
+movies_recommender_system/venv/Lib/
