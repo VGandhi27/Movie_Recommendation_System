@@ -3,16 +3,17 @@ import pickle
 import pandas as pd
 import requests
 
+
 def fetch_poster(movie_id):
     response = requests.get("https://api.themoviedb.org/3/movie/{}?api_key=3b7e0952c7c98a2375419c824c6bb797&language=en-US".format(movie_id))
     data = response.json()
-    # st.text(data)
+    # st.subheader(data)
     return "https://image.tmdb.org/t/p/w500/" + data['poster_path']
 
 def fetch_homepage(movie_id):
     response = requests.get("https://api.themoviedb.org/3/movie/{}?api_key=3b7e0952c7c98a2375419c824c6bb797&language=en-US".format(movie_id))
     data2 = response.json()
-    # st.text(data2)
+    # st.subheader(data2)
     return data2['homepage']
 
 
@@ -53,49 +54,51 @@ if st.button('Enter'):
 
     col1, col2   = st.columns(2, gap="small")
     with col1:
-        st.text(names[0])
+        st.subheader(names[0])
         st.image(posters[0])
         if homepage[0] == "":
-            "link of the Homepage: Not Available"
+            "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " + homepage[0])
+            st.markdown("Link of the Homepage: " + homepage[0])
     with col2:
-        st.text(names[1])
+        st.subheader(names[1])
         st.image(posters[1])
         if homepage[1] == "":
-            "link of the Homepage: Not Available"
+            "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " + homepage[1])
+            st.markdown("Link of the Homepage: " + homepage[1])
 
     with col1:
-        st.text(names[2])
+        st.subheader(names[2])
         st.image(posters[2])
         if homepage[2] == "":
-            "link of the Homepage: Not Available"
+            "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " + homepage[2])
+            st.markdown("Link of the Homepage: " + homepage[2])
 
     with col2:
-        st.text(names[3])
+        st.subheader(names[3])
         st.image(posters[3])
         if homepage[3] == "":
-            "link of the Homepage: Not Available"
+            "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " + homepage[3])
+            st.markdown("Link of the Homepage: " + homepage[3])
 
     with col1:
-        st.text(names[4])
+        st.subheader(names[4])
         st.image(posters[4])
-        if homepage[4] == "": "link of the Homepage: Not Available"
+        if homepage[4] == "": "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " +homepage[4]  )
+            st.markdown("Link of the Homepage: " +homepage[4]  )
 
     with col2:
-        st.text(names[5])
+        st.subheader(names[5])
         st.image(posters[5])
         if homepage[5] == "":
-            "link of the Homepage: Not Available"
+            "Link of the Homepage: Not Available"
         else:
-            st.markdown("link of the Homepage: " + homepage[5])
+            st.markdown("Link of the Homepage: " + homepage[5])
 
 
+st.subheader(
+'Created by Vidushi Gandhi | © 2023 All Right Reserved.')
